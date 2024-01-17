@@ -11,7 +11,6 @@ class MainViewModel {
 
     weak var delegate: MainViewModelDelegate?
 
-
     func actualizarEdadConFecha(_ fechaNacimiento: Date) {
         let calendar = Calendar.current
         let components = calendar.dateComponents([.year], from: fechaNacimiento, to: Date())
