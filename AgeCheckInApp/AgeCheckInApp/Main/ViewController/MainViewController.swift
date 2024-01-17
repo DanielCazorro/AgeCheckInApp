@@ -7,8 +7,14 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+// MARK: - Protocol
 
+protocol MainViewModelDelegate: AnyObject {
+    func didUpdateAgeStatus(isMinor: Bool)
+}
+
+class MainViewController: UIViewController {
+    
     // MARK: - IBOutlets
     @IBOutlet weak var nameSurnameSV: UIStackView!
     @IBOutlet weak var schoolObservationsSV: UIStackView!
@@ -23,15 +29,24 @@ class MainViewController: UIViewController {
     @IBOutlet weak var finishButton: UIButton!
     @IBOutlet weak var resetButton: UIButton!
     
+    // viewModel
+    var viewModel = MainViewModel()
     
     // MARK: - Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        // Asociar el ViewController como delegado del ViewModel
+        viewModel.delegate = self
+        
+        // Configurar la visibilidad inicial del campo del colegio
+        schoolTextField.isHidden = true
+        
+        // Asociar el UIDatePicker a la acción datePickerValueChanged
+        datePicker.addTarget(self, action: #selector(datePickerValueChanged(_:)), for: .valueChanged)
     }
-
+    
     // MARK: - IBActions
     
     @IBAction func tapFinishButton(_ sender: Any) {
@@ -41,5 +56,17 @@ class MainViewController: UIViewController {
     @IBAction func tapResetButton(_ sender: Any) {
     }
     
-    
+    @objc func datePickerValueChanged(_ sender: UIDatePicker) {
+            // Actualizar el ViewModel con la nueva fecha seleccionada
+            viewModel.actualizarEdadConFecha(sender.date)
+        }
+    }
+
+// MARK: -Extension
+// Conformar el ViewController al protocolo para recibir actualizaciones del ViewModel
+extension MainViewController: MainViewModelDelegate {
+    func didUpdateAgeStatus(isMinor: Bool) {
+        // Actualizar la visibilidad del campo del colegio
+        schoolTextField.isHidden = !isMinor
+    }
 }
