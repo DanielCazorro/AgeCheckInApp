@@ -10,6 +10,16 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="AgeCheckInApp" customModuleProvider="target">
             <connections>
+                <outlet property="datePicker" destination="tFc-pX-kFY" id="2h6-rA-D1S"/>
+                <outlet property="finishButton" destination="Hvg-YQ-95F" id="rea-cb-pYG"/>
+                <outlet property="finishResetButtonsSV" destination="y6j-Uy-vuX" id="OQ2-oG-sbe"/>
+                <outlet property="nameSurnameSV" destination="p2J-1V-1oM" id="9Vp-NL-jhZ"/>
+                <outlet property="nameTextField" destination="b4z-Ec-lOb" id="Qpu-wy-veR"/>
+                <outlet property="observationsTextField" destination="xfb-XB-jSY" id="PM4-wv-bcw"/>
+                <outlet property="resetButton" destination="IIn-wM-J70" id="yfl-6Y-tAJ"/>
+                <outlet property="schoolObservationsSV" destination="mki-ZP-YQL" id="eS0-lg-yVE"/>
+                <outlet property="schoolTextField" destination="Vc3-Gj-phg" id="VNp-dH-WIR"/>
+                <outlet property="surNameTextField" destination="IXu-fU-YSX" id="O59-gc-vXz"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -37,32 +47,38 @@
                     <rect key="frame" x="8" y="191" width="377" height="216"/>
                 </datePicker>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="mki-ZP-YQL">
-                    <rect key="frame" x="8" y="415" width="377" height="84"/>
+                    <rect key="frame" x="8" y="415" width="377" height="34"/>
                     <subviews>
-                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Colegio" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vc3-Gj-phg">
-                            <rect key="frame" x="0.0" y="0.0" width="377" height="34"/>
+                        <textField hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Colegio" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vc3-Gj-phg">
+                            <rect key="frame" x="0.0" y="0.0" width="377" height="0.0"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Observaciones" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xfb-XB-jSY">
-                            <rect key="frame" x="0.0" y="50" width="377" height="34"/>
+                            <rect key="frame" x="0.0" y="0.0" width="377" height="34"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                     </subviews>
                 </stackView>
                 <stackView opaque="NO" contentMode="scaleToFill" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="y6j-Uy-vuX">
-                    <rect key="frame" x="40" y="523" width="313" height="34.333333333333371"/>
+                    <rect key="frame" x="40" y="473" width="313" height="34.333333333333314"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hvg-YQ-95F">
                             <rect key="frame" x="0.0" y="0.0" width="144.66666666666666" height="34.333333333333336"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="filled" title="Finalizar"/>
+                            <connections>
+                                <action selector="tapFinishButton:" destination="-1" eventType="touchUpInside" id="wZF-UF-8o8"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IIn-wM-J70">
                             <rect key="frame" x="168.66666666666663" y="0.0" width="144.33333333333337" height="34.333333333333336"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="tinted" title="Resetear"/>
+                            <connections>
+                                <action selector="tapResetButton:" destination="-1" eventType="touchUpInside" id="pZn-dY-svz"/>
+                            </connections>
                         </button>
                     </subviews>
                 </stackView>
