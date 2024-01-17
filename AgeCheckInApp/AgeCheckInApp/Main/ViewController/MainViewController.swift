@@ -86,7 +86,7 @@ class MainViewController: UIViewController {
         
         // Pasa la fecha a las funciones del ViewModel
         let birthDate = sender.date
-        let isBirthDateValid = viewModel.birthDateValid(birthDate)
+        _ = viewModel.birthDateValid(birthDate)
         let isSchoolRequired = viewModel.isSchoolRequired(birthDate)
         
         // Actualiza la visibilidad del campo del colegio según esColegioObligatorio
