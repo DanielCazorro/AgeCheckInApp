@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="AgeCheckInApp" customModuleProvider="target">
+            <connections>
+                <outlet property="datePicker" destination="tFc-pX-kFY" id="2h6-rA-D1S"/>
+                <outlet property="finishButton" destination="Hvg-YQ-95F" id="rea-cb-pYG"/>
+                <outlet property="finishResetButtonsSV" destination="y6j-Uy-vuX" id="OQ2-oG-sbe"/>
+                <outlet property="nameSurnameSV" destination="p2J-1V-1oM" id="9Vp-NL-jhZ"/>
+                <outlet property="nameTextField" destination="b4z-Ec-lOb" id="Qpu-wy-veR"/>
+                <outlet property="observationsTextField" destination="xfb-XB-jSY" id="PM4-wv-bcw"/>
+                <outlet property="resetButton" destination="IIn-wM-J70" id="yfl-6Y-tAJ"/>
+                <outlet property="schoolObservationsSV" destination="mki-ZP-YQL" id="eS0-lg-yVE"/>
+                <outlet property="schoolTextField" destination="Vc3-Gj-phg" id="VNp-dH-WIR"/>
+                <outlet property="surNameTextField" destination="IXu-fU-YSX" id="O59-gc-vXz"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="p2J-1V-1oM">
+                    <rect key="frame" x="8" y="99" width="377" height="84"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b4z-Ec-lOb">
+                            <rect key="frame" x="0.0" y="0.0" width="377" height="34"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Apellido" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IXu-fU-YSX">
+                            <rect key="frame" x="0.0" y="50" width="377" height="34"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                </stackView>
+                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="tFc-pX-kFY">
+                    <rect key="frame" x="8" y="191" width="377" height="216"/>
+                </datePicker>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="mki-ZP-YQL">
+                    <rect key="frame" x="8" y="415" width="377" height="84"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Colegio" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vc3-Gj-phg">
+                            <rect key="frame" x="0.0" y="0.0" width="377" height="34"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Observaciones" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xfb-XB-jSY">
+                            <rect key="frame" x="0.0" y="50" width="377" height="34"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="y6j-Uy-vuX">
+                    <rect key="frame" x="40" y="523" width="313" height="34.333333333333371"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hvg-YQ-95F">
+                            <rect key="frame" x="0.0" y="0.0" width="144.66666666666666" height="34.333333333333336"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="filled" title="Finalizar"/>
+                            <connections>
+                                <action selector="tapFinishButton:" destination="-1" eventType="touchUpInside" id="wZF-UF-8o8"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IIn-wM-J70">
+                            <rect key="frame" x="168.66666666666663" y="0.0" width="144.33333333333337" height="34.333333333333336"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="tinted" title="Resetear"/>
+                            <connections>
+                                <action selector="tapResetButton:" destination="-1" eventType="touchUpInside" id="pZn-dY-svz"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="y6j-Uy-vuX" secondAttribute="trailing" constant="40" id="04v-3R-waR"/>
+                <constraint firstItem="y6j-Uy-vuX" firstAttribute="top" secondItem="mki-ZP-YQL" secondAttribute="bottom" constant="24" id="52A-Jr-h4Q"/>
+                <constraint firstItem="p2J-1V-1oM" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="NrQ-kf-vW2"/>
+                <constraint firstItem="mki-ZP-YQL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="NtH-GR-orb"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="p2J-1V-1oM" secondAttribute="trailing" constant="8" id="T1n-mk-vcY"/>
+                <constraint firstItem="p2J-1V-1oM" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="40" id="Ttr-oK-f7y"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="mki-ZP-YQL" secondAttribute="trailing" constant="8" id="VRI-Td-oft"/>
+                <constraint firstItem="tFc-pX-kFY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="cnx-Kj-9G0"/>
+                <constraint firstItem="y6j-Uy-vuX" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="kc9-gg-dWw"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="tFc-pX-kFY" secondAttribute="trailing" constant="8" id="qt2-pt-Il4"/>
+                <constraint firstItem="mki-ZP-YQL" firstAttribute="top" secondItem="tFc-pX-kFY" secondAttribute="bottom" constant="8" id="uF6-mG-7KM"/>
+                <constraint firstItem="tFc-pX-kFY" firstAttribute="top" secondItem="p2J-1V-1oM" secondAttribute="bottom" constant="8" id="xyD-it-k2z"/>
+            </constraints>
+            <point key="canvasLocation" x="116.79389312977099" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
