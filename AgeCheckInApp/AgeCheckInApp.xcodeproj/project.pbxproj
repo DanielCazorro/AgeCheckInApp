@@ -58,8 +58,8 @@
 		2C3BF4822B5816B2004A6006 /* AgeCheckInApp */ = {
 			isa = PBXGroup;
 			children = (
-				2C3BF4982B58178A004A6006 /* Main */,
 				2C3BF4972B581733004A6006 /* LaunchScreen */,
+				2C3BF4982B58178A004A6006 /* Main */,
 				2C3BF4832B5816B2004A6006 /* AppDelegate.swift */,
 				2C3BF4852B5816B2004A6006 /* SceneDelegate.swift */,
 				2C3BF48C2B5816B3004A6006 /* Assets.xcassets */,
@@ -79,9 +79,9 @@
 		2C3BF4982B58178A004A6006 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				2C3BF49B2B5817A0004A6006 /* ViewModel */,
-				2C3BF49A2B581796004A6006 /* ViewController */,
 				2C3BF4992B581792004A6006 /* View */,
+				2C3BF49A2B581796004A6006 /* ViewController */,
+				2C3BF49B2B5817A0004A6006 /* ViewModel */,
 			);
 			path = Main;
 			sourceTree = "<group>";
