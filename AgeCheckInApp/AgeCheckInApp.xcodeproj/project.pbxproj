@@ -14,6 +14,7 @@
 		2C3BF49E2B581840004A6006 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3BF49C2B581840004A6006 /* MainViewController.swift */; };
 		2C3BF49F2B581840004A6006 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C3BF49D2B581840004A6006 /* MainViewController.xib */; };
 		2C3BF4A12B581FF2004A6006 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3BF4A02B581FF2004A6006 /* MainViewModel.swift */; };
+		2C5B8DE82B74D8AE0036FAFE /* MainViewWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5B8DE72B74D8AE0036FAFE /* MainViewWireframe.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		2C3BF49C2B581840004A6006 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		2C3BF49D2B581840004A6006 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		2C3BF4A02B581FF2004A6006 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		2C5B8DE72B74D8AE0036FAFE /* MainViewWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewWireframe.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				2C3BF49D2B581840004A6006 /* MainViewController.xib */,
 				2C3BF49C2B581840004A6006 /* MainViewController.swift */,
 				2C3BF4A02B581FF2004A6006 /* MainViewModel.swift */,
+				2C5B8DE72B74D8AE0036FAFE /* MainViewWireframe.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -173,6 +176,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C5B8DE82B74D8AE0036FAFE /* MainViewWireframe.swift in Sources */,
 				2C3BF49E2B581840004A6006 /* MainViewController.swift in Sources */,
 				2C3BF4842B5816B2004A6006 /* AppDelegate.swift in Sources */,
 				2C3BF4862B5816B2004A6006 /* SceneDelegate.swift in Sources */,

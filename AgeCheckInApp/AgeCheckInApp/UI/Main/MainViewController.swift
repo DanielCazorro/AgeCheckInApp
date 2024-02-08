@@ -30,7 +30,7 @@ class MainViewController: UIViewController {
     @IBOutlet weak var resetButton: UIButton!
     
     // viewModel
-    var viewModel = MainViewModel()
+    private var viewModel = MainViewModel()
     
     // MARK: - Life Cycle
     
@@ -83,6 +83,10 @@ class MainViewController: UIViewController {
     }
     
     // MARK: -Functions
+    
+    func set(viewModel: MainViewModel) {
+        self.viewModel = viewModel
+    }
     
     @objc func datePickerValueChanged(_ sender: UIDatePicker) {
         viewModel.updateAge(with: sender.date)
