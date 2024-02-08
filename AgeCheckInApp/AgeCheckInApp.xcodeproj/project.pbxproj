@@ -58,10 +58,8 @@
 		2C3BF4822B5816B2004A6006 /* AgeCheckInApp */ = {
 			isa = PBXGroup;
 			children = (
-				2C3BF4972B581733004A6006 /* LaunchScreen */,
-				2C3BF4982B58178A004A6006 /* Main */,
-				2C3BF4832B5816B2004A6006 /* AppDelegate.swift */,
-				2C3BF4852B5816B2004A6006 /* SceneDelegate.swift */,
+				2C5B8DE52B74D8380036FAFE /* App */,
+				2C5B8DE62B74D8440036FAFE /* UI */,
 				2C3BF48C2B5816B3004A6006 /* Assets.xcassets */,
 				2C3BF4912B5816B3004A6006 /* Info.plist */,
 			);
@@ -79,35 +77,29 @@
 		2C3BF4982B58178A004A6006 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				2C3BF4992B581792004A6006 /* View */,
-				2C3BF49A2B581796004A6006 /* ViewController */,
-				2C3BF49B2B5817A0004A6006 /* ViewModel */,
+				2C3BF49D2B581840004A6006 /* MainViewController.xib */,
+				2C3BF49C2B581840004A6006 /* MainViewController.swift */,
+				2C3BF4A02B581FF2004A6006 /* MainViewModel.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
 		};
-		2C3BF4992B581792004A6006 /* View */ = {
+		2C5B8DE52B74D8380036FAFE /* App */ = {
 			isa = PBXGroup;
 			children = (
-				2C3BF49D2B581840004A6006 /* MainViewController.xib */,
+				2C3BF4832B5816B2004A6006 /* AppDelegate.swift */,
+				2C3BF4852B5816B2004A6006 /* SceneDelegate.swift */,
 			);
-			path = View;
+			path = App;
 			sourceTree = "<group>";
 		};
-		2C3BF49A2B581796004A6006 /* ViewController */ = {
+		2C5B8DE62B74D8440036FAFE /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				2C3BF49C2B581840004A6006 /* MainViewController.swift */,
+				2C3BF4972B581733004A6006 /* LaunchScreen */,
+				2C3BF4982B58178A004A6006 /* Main */,
 			);
-			path = ViewController;
-			sourceTree = "<group>";
-		};
-		2C3BF49B2B5817A0004A6006 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				2C3BF4A02B581FF2004A6006 /* MainViewModel.swift */,
-			);
-			path = ViewModel;
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
