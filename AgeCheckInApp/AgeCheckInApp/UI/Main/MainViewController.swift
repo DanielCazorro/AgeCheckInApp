@@ -29,32 +29,25 @@ class MainViewController: UIViewController {
     @IBOutlet weak var finishButton: UIButton!
     @IBOutlet weak var resetButton: UIButton!
     
-    // viewModel
-    var viewModel = MainViewModel()
+    // MARK: - Properties
+    private var viewModel = MainViewModel()
     
     // MARK: - Life Cycle
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        asignDelegate()
+        gestureCloseKeyboard()
+
         // Asociar el ViewController como delegado del ViewModel
         viewModel.delegate = self
         
         // Asociar el UIDatePicker a la acción datePickerValueChanged
         datePicker.addTarget(self, action: #selector(datePickerValueChanged(_:)), for: .valueChanged)
         
-        // Asignar el delegado del UITextField
-        nameTextField.delegate = self
-        surNameTextField.delegate = self
-        schoolTextField.delegate = self
-        observationsTextField.delegate = self
-        
         // Llama a la función para actualizar el estado del botón "Finalizar" al cargar la vista
         updateFinishButtonState()
-        
-        // Agregar gesto para ocultar el teclado al tocar en cualquier parte de la pantalla
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
-        view.addGestureRecognizer(tapGesture)
     }
     
     // MARK: - IBActions
@@ -83,6 +76,24 @@ class MainViewController: UIViewController {
     }
     
     // MARK: -Functions
+    
+    func set(viewModel: MainViewModel) {
+        self.viewModel = viewModel
+    }
+    
+    private func gestureCloseKeyboard() {
+        // Agregar gesto para ocultar el teclado al tocar en cualquier parte de la pantalla
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tapGesture)
+    }
+    
+    private func asignDelegate() {
+        // Asignar el delegado del UITextField
+        nameTextField.delegate = self
+        surNameTextField.delegate = self
+        schoolTextField.delegate = self
+        observationsTextField.delegate = self
+    }
     
     @objc func datePickerValueChanged(_ sender: UIDatePicker) {
         viewModel.updateAge(with: sender.date)
