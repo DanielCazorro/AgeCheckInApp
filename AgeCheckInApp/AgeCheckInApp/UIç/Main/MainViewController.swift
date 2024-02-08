@@ -49,6 +49,9 @@ class MainViewController: UIViewController {
         schoolTextField.delegate = self
         observationsTextField.delegate = self
         
+        // Llama a la función para actualizar el estado del botón "Finalizar" al cargar la vista
+        updateFinishButtonState()
+        
         // Agregar gesto para ocultar el teclado al tocar en cualquier parte de la pantalla
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tapGesture)
@@ -91,11 +94,13 @@ class MainViewController: UIViewController {
         
         // Actualiza la visibilidad del campo del colegio según esColegioObligatorio
         schoolTextField.isHidden = !isSchoolRequired
+        updateFinishButtonState()
     }
     
     @objc func dismissKeyboard() {
         // Ocultar el teclado al tocar en cualquier parte de la pantalla
         view.endEditing(true)
+        updateFinishButtonState()
     }
     
     private func showResetAlert() {
@@ -117,6 +122,20 @@ class MainViewController: UIViewController {
         let okAction = UIAlertAction(title: "Aceptar", style: .default, handler: nil)
         alert.addAction(okAction)
         present(alert, animated: true, completion: nil)
+    }
+    
+    // Función para actualizar el estado del botón "Finalizar" basado en si todos los campos obligatorios están completos
+    private func updateFinishButtonState() {
+        let name = nameTextField.text ?? ""
+        let surName = surNameTextField.text ?? ""
+        let school = schoolTextField.text ?? ""
+        let observations = observationsTextField.text ?? ""
+        let birthDate = datePicker.date
+
+        let isFormComplete = viewModel.isFormComplete(name: name, surName: surName, school: school, observations: observations, birthDate: birthDate)
+        
+        // Activa o desactiva el botón "Finalizar" según si el formulario está completo
+        finishButton.isEnabled = isFormComplete
     }
 }
 
